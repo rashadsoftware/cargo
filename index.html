@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="plugin/fontawesome-free-5.15.2/css/all.css" />
+		<!-- OwlCarousel CSS -->
+		<link
+			rel="stylesheet"
+			href="plugin/OwlCarousel2-2.3.4/owl.carousel.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="plugin/OwlCarousel2-2.3.4/owl.theme.default.min.css"
+		/>
+
+		<title>Dost Cargo</title>
+		<link rel="shortcut icon" type="image/jpg" href="img/favico.png" />
+
+		<style>
+			.box {
+				position: relative;
+				width: 320px;
+				height: 350px;
+				padding: 100px 40px 60px;
+				box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+			}
+			.box::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #0d6efd;
+				transform: scaleY(0);
+				transform-origin: top;
+				transition: transform 0.5s;
+			}
+			.box:hover:before {
+				transform: scaleY(1);
+				transform-origin: bottom;
+				transition: transform 0.5s;
+			}
+			.box h2 {
+				position: absolute;
+				left: 40px;
+				top: 60px;
+				font-size: 4em;
+				font-weight: 800;
+				z-index: 1;
+				opacity: 0.1;
+				transition: 0.5s;
+			}
+			.box:hover h2 {
+				opacity: 1;
+				color: #fff;
+				transform: translateY(-40px);
+			}
+			.box h3 {
+				position: relative;
+				font-size: 1.5em;
+				z-index: 2;
+				color: #333;
+				transition: 0.5s;
+			}
+			.box p {
+				position: relative;
+				z-index: 2;
+				color: #333;
+				transition: 0.5s;
+			}
+			.box:hover h3,
+			.box:hover p {
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>		
+		<!--  <div class="row"></div>  -->
+		<div class="container">
+			<div class="row">
+				<div
+					class="d-flex align-items-center justify-content-between mt-3"
+					style="border-bottom: 1px solid #eee"
+				>
+					<ul class="list-unstyled">
+						<li class="d-inline-block ms-2">
+							<a href="#" class="text-decoration-none">Bizim haqqımızda</a>
+						</li>
+						<li class="d-inline-block ms-2">
+							<a href="#" class="text-decoration-none"
+								>Ən çox verilən suallar</a
+							>
+						</li>
+						<li class="d-inline-block ms-2">
+							<a href="#" class="text-decoration-none">Xidmət Şəbəkəsi</a>
+						</li>
+						<li class="d-inline-block ms-2">
+							<a href="#" class="text-decoration-none"
+								>Xəbərlər və yeniliklər</a
+							>
+						</li>
+					</ul>
+
+					<div class="d-flex align-items-center">
+						<p class="me-3">
+							<i class="fas fa-phone-alt"></i> +99455 821 56 73
+						</p>
+						<a href="#" class="btn btn-primary mb-3">Sifariş et</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header>
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#">Dost Cargo</a>
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#"
+										>Ana Səhifə</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Qiymət Cədvəli</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Daşınma şərtləri</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Mağazalar</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Daşınması qadağan məhsullar</a>
+								</li>
+							</ul>
+							<div class="d-flex align-items-center">
+								<a href="#" class="me-3 text-decoration-none" data-bs-toggle="modal"
+								data-bs-target="#exampleModal">Daxil ol</a>
+									
+								</button>
+								<button class="btn btn-outline-primary" type="button">
+									Qeydiyyat
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="mt-2">
+			<div class="container">
+				<div class="row">
+					<div
+						id="carouselExampleCaptions"
+						class="carousel slide"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="2"
+								aria-label="Slide 3"
+							></button>
+						</div>
+						<div class="carousel-inner" style="height: 600px">
+							<div class="carousel-item active">
+								<img src="img/banner/1.jpg" class="d-block w-100" alt="..." />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>First slide label</h5>
+									<p>
+										Some representative placeholder content for the first slide.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/banner/2.jpg" class="d-block w-100" alt="..." />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Second slide label</h5>
+									<p>
+										Some representative placeholder content for the second
+										slide.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="img/banner/3.jpg" class="d-block w-100" alt="..." />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Third slide label</h5>
+									<p>
+										Some representative placeholder content for the third slide.
+									</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-5">
+			<div class="container">
+				<div class="row">
+					<h2 class="mb-5">Biz necə işləyirik?</h2>
+					<div class="col-md-6 col-lg-3">
+						<div class="box">
+							<h2>01</h2>
+							<h3>Addım 1</h3>
+							<p>
+								www.tezzex.az saytında qeydiyyatdan keçməklə, ABŞ və Türkiyədə
+								yerləşən anbarlarımızın ünvanlarını öyrənin.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="box">
+							<h2>01</h2>
+							<h3>Addım 2</h3>
+							<p>
+								Onlayn mağazalardan istədiyiniz məhsulu alın və ya bizim
+								almağımız üçün linkini bizə göndərin.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="box">
+							<h2>01</h2>
+							<h3>Addım 3</h3>
+							<p>
+								Bağlamanın təhvil verilməsi üçün alış-veriş zamanı xaricdəki
+								anbarlarımızın ünvanını qeyd edin.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<div class="box">
+							<h2>01</h2>
+							<h3>Addım 4</h3>
+							<p>
+								Bağlamanızı ofisimizdən təhvil alın və ya bağlamanızı qapıya
+								çatdırılma ilə sifariş edin.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-5">
+			<div class="container">
+				<div class="row">
+					<h2>Xəbər və yeniliklər</h2>
+					<p class="text-muted mb-5">
+						Yeniliklər və kampaniyalar barədə məlumatlar əldə etmək üçün bizi
+						izləmədə qalın
+					</p>
+					<div class="col-4">
+						<div class="card w-100">
+							<img
+								class="card-img-top"
+								src="img/offer/cosmetcs.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Türkiyədən kosmetika sifarişi</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									Reprehenderit...
+								</h6>
+							</div>
+							<div
+								class="
+									card-footer
+									text-muted
+									bg-white
+									d-flex
+									justify-content-between
+								"
+								style="border-top: none"
+							>
+								<a href="#" class="card-link text-decoration-none"
+									>Daha ətraflı</a
+								>
+								<span>2 gün əvvəl</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="card w-100">
+							<img
+								class="card-img-top"
+								src="img/offer/koton.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Türkiyədən kosmetika sifarişi</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									Reprehenderit...
+								</h6>
+							</div>
+							<div
+								class="
+									card-footer
+									text-muted
+									bg-white
+									d-flex
+									justify-content-between
+								"
+								style="border-top: none"
+							>
+								<a href="#" class="card-link text-decoration-none"
+									>Daha ətraflı</a
+								>
+								<span>2 gün əvvəl</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="card w-100">
+							<img
+								class="card-img-top"
+								src="img/offer/ustunlukler.jpg"
+								alt="Card image cap"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">Türkiyədən kosmetika sifarişi</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									Reprehenderit...
+								</h6>
+							</div>
+							<div
+								class="
+									card-footer
+									text-muted
+									bg-white
+									d-flex
+									justify-content-between
+								"
+								style="border-top: none"
+							>
+								<a href="#" class="card-link text-decoration-none"
+									>Daha ətraflı</a
+								>
+								<span>2 gün əvvəl</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-5">
+			<div class="container">
+				<div class="row">
+					<h2 class="mb-4">Kalkulyator</h2>
+					<div class="col-lg-7">
+						<div class="row">
+							<div class="col-md-4">
+								<select
+									class="form-select mb-3"
+									aria-label="Default select example"
+								>
+									<option selected>Ölkə</option>
+									<option value="tr">Türkiyə</option>
+									<option value="usa">Amerika</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+								<select
+									class="form-select mb-3"
+									aria-label="Default select example"
+								>
+									<option selected>Ölçü</option>
+									<option value="sm">sm</option>
+								</select>
+							</div>
+							<div class="col-md-6">
+								<select
+									class="form-select mb-3"
+									aria-label="Default select example"
+								>
+									<option selected>Məhsulun növü</option>
+									<option value="tr">Maye deyil</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="mb-3">
+									<input type="text" class="form-control" placeholder="En" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="Uzunluq"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="mb-3">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="Hündürlük"
+									/>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="mb-3">
+											<input
+												type="text"
+												class="form-control"
+												placeholder="Çəki (kq)"
+											/>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="mb-3">
+											<input
+												type="text"
+												class="form-control"
+												placeholder="Miqdar"
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<p class="text-center text-primary" style="font-weight: bold">
+									Cəmi: 120.00$
+								</p>
+							</div>
+							<div class="col-md-6">
+								<button
+									class="btn btn-outline-primary d-block w-100"
+									type="submit"
+								>
+									Hesabla
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-5">
+			<div class="container">
+				<div class="row">
+					<h2 class="mb-4">Mağazalar</h2>
+					<div class="owl-carousel owl-theme">
+						<div class="item" style="width: 150px">
+							<img src="img/magazine/20201023180089105.png" alt="" />
+						</div>
+						<div class="item" style="width: 150px">
+							<img src="img/magazine/20201023181063457.png" alt="" />
+						</div>
+						<div class="item" style="width: 150px">
+							<img src="img/magazine/20201023181671376.png" alt="" />
+						</div>
+						<div class="item" style="width: 150px">
+							<img src="img/magazine/20201023182650510.png" alt="" />
+						</div>
+						<div class="item" style="width: 150px">
+							<img src="img/magazine/20201023185361794.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="mt-5 text-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-5 bg-danger">
+						<h4>Bizə yazın</h4>
+					</div>
+					<div class="col-3 bg-success">1</div>
+					<div class="col-4 bg-primary">
+						<h4>Əlaqə</h4>
+						<ul class="list-unstyled">
+							<li>
+								<i class="fas fa-map-marker me-2"></i> Xırdalan şəhəri Heydər
+								Əliyev prospekti məhəllə 30
+							</li>
+							<li><i class="fas fa-envelope me-2"></i> info@dostcargo.com</li>
+							<li><i class="fas fa-phone-alt me-2"></i> *1344</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body">...</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+						>
+							Close
+						</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- OwlCarousel CSS -->
+		<script src="plugin/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+
+		<script>
+			$(function () {
+				// carousel init
+				$(".carousel").carousel();
+
+				// owl carousel init
+				$(".owl-carousel").owlCarousel({
+					loop: true,
+					margin: 5,
+					responsive: {
+						0: {
+							items: 1,
+						},
+						600: {
+							items: 3,
+						},
+						1000: {
+							items: 5,
+						},
+					},
+				});
+			});
+		</script>
+	</body>
+</html>
